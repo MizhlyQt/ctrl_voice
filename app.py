@@ -35,7 +35,26 @@ image = Image.open('voice_ctrl.jpg')
 
 st.image(image, width=200)
 
+page_style = """
+<style>
+/* Fondo principal */
+[data-testid="stAppViewContainer"] {
+    background-color: #0E1117;
+}
 
+/* Fondo del sidebar */
+[data-testid="stSidebar"] {
+    background-color: #1C1F26;
+}
+
+/* Color de todos los textos */
+[data-testid="stMarkdownContainer"] {
+    color: #FFDD00;
+}
+</style>
+"""
+
+st.markdown(page_style, unsafe_allow_html=True)
 
 
 st.write("Toca el Botón y habla ")
